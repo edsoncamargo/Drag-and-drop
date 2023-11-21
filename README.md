@@ -1,6 +1,6 @@
-# EcDragAndDrop
+# ECDragAndDrop
 
-![EcDragAndDrop](./assets/images/icon.jpg)
+![ECDragAndDrop](./assets/images/icon.jpg)
 
 **ec-drag-and-drop** is a straightforward project that features a static Kanban board with three columns: Todo, In Progress, and Done. The primary objective of this project is to provide a hands-on experience and demonstration of drag and drop functionality for managing tasks across different stages. It's important to note that this example is static, and additional lanes or tasks cannot be added. The project is developed using JavaScript, HTML, and Sass, serving as a valuable resource for learning and practicing drag and drop interactions.
 
@@ -24,7 +24,7 @@ The Kanban board is static, and additional lanes or tasks cannot be added in thi
 
 ## How to Use
 
-Clone the repository: git clone https://github.com/edsoncamargo/EcDragAndDrop
+Clone the repository: git clone https://github.com/edsoncamargo/ECDragAndDrop
 Open index.html in your preferred web browser.
 
 ## Contribution
