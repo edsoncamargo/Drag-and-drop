@@ -70,15 +70,27 @@
   border-radius: 8px;
   cursor: grab;
   border: 2px dashed transparent;
+  box-sizing: border-box;
   transition: all 0.3s ease-in-out;
 
+  &[active-draggable="true"] {
+    -webkit-box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.67);
+    -moz-box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.67);
+    box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.67);
+
+    &:active {
+      opacity: 1;
+    }
+  }
+
   &:active {
+    opacity: 0.2 !important;
     border: 2px dashed var(--ec-color-neutral-100);
     cursor: grabbing;
   }
 
   &.grabbing {
-    opacity: 0.5;
+    opacity: 1;
   }
 
   &.preview {
