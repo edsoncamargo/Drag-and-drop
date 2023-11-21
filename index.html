@@ -1,63 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drag and Drop</title>
+    <title>EC - DRAG & DROP</title>
 
-    <link rel="stylesheet" href="./assets/css/styles.css">
-</head>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
 
-<body>
+  <body>
     <nav class="navbar navbar-container">
-        <em class="navbar-brand"></em>
+      <a
+        class="navbar-brand"
+        href="https://edsoncamargo.dev"
+        target="_blank"
+      ></a>
 
-        <ul>
-            <li>Drag & drop - Kanban</li>
-        </ul>
+      <ul>
+        <li>DRAG & DROP</li>
+      </ul>
     </nav>
 
-    <div class="drag-container">
+    <main>
+      <div class="drag-container">
         <div id="areaOne" class="area area-one">
-            <h1>Todo</h1>
-            <div id="dropOne" class="drop drop-one">
-                <p id="firstElement" draggable="true" class="element-draggable">
-                    <em class="icon burguer"></em>
-                    <small>First task</small>
-                </p>
-                <p id="secondElement" draggable="true" class="element-draggable">
-                    <em class="icon burguer"></em>
-                    <small>Second task</small>
-                </p>
-                <p id="thirdElement" draggable="true" class="element-draggable">
-                    <em class="icon burguer"></em>
-                    <small>Third task</small>
-                </p>
-                <p id="fourthElement" draggable="true" class="element-draggable">
-                    <em class="icon burguer"></em>
-                    <small>Fourth task</small>
-                </p>
-                <p id="fifithElement" draggable="true" class="element-draggable">
-                    <em class="icon burguer"></em>
-                    <small>Fifith task</small>
-                </p>
-            </div>
+          <h1>Todo</h1>
+          <div id="dropOne" class="drop drop-one">
+            <p id="firstElement" draggable="true" class="element-draggable">
+              <em class="icon burguer"></em>
+              <small>First task</small>
+            </p>
+          </div>
         </div>
 
         <div id="areaTwo" class="area area-two">
-            <h1>In progress</h1>
-            <div id="dropTwo" class="drop drop-two"></div>
+          <h1>In progress</h1>
+          <div id="dropTwo" class="drop drop-two">
+            <p id="secondElement" draggable="true" class="element-draggable">
+              <em class="icon burguer"></em>
+              <small>Second task</small>
+            </p>
+          </div>
         </div>
 
         <div id="areaThree" class="area area-three">
-            <h1>Done</h1>
-            <div id="dropThree" class="drop drop-three"></div>
+          <h1>Done</h1>
+          <div id="dropThree" class="drop drop-three">
+            <p id="thirdElement" draggable="true" class="element-draggable">
+              <em class="icon burguer"></em>
+              <small>Third task</small>
+            </p>
+          </div>
         </div>
-    </div>
+      </div>
+    </main>
 
     <script src="./assets/js/drag.js"></script>
-</body>
-
+  </body>
 </html>

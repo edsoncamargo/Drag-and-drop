@@ -1,9 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700&display=swap');
-@import './common/reset.scss';
-@import './components/header.scss';
-@import './components/list.scss';
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700&display=swap");
+@import "./common/reset.scss";
+@import "./variables/colors";
+@import "./components/header.scss";
+@import "./components/list.scss";
 
 body {
-    font-family: 'Raleway', sans-serif;
-    background-color: #140011;
+  font-family: "Raleway", sans-serif;
+  background-color: var(--ec-color-primary-dark);
+  overflow: hidden;
+}
+
+main {
+  height: calc(100vh - 86px - 80px);
 }
