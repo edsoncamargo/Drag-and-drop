@@ -148,7 +148,7 @@ table {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--ec-color-primary-regular);
+  background-color: var(--ec-color-primary);
   color: #fff;
   -webkit-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.67);
   -moz-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.67);
@@ -186,7 +186,7 @@ table {
 .drag-container .area {
   height: 100%;
   width: calc(33.33% - 8px);
-  background-color: var(--ec-color-primary-regular);
+  background-color: var(--ec-color-primary);
   border: 2px solid rgba(0, 0, 0, 0.5);
   border-radius: 8px;
   -webkit-box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.67);
@@ -195,7 +195,7 @@ table {
   padding: 8px;
   margin-right: 8px;
   margin-bottom: 8px;
-  color: #fff;
+  color: var(--ec-color-neutral-100);
 }
 @media (max-width: 768px) {
   .drag-container .area {
@@ -211,52 +211,46 @@ table {
   margin-bottom: 32px;
 }
 .drag-container .area .drop {
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.5);
   height: 100%;
   min-height: 74px;
+  color: var(--ec-color-neutral-100);
+  background-color: rgba(0, 0, 0, 0.5);
   padding-top: 1px;
   padding-bottom: 1px;
   border-radius: 8px;
+  transition: all 0.3s ease-in-out;
 }
 .drag-container .area .drop.over {
-  background: rgba(0, 0, 0, 0.7);
+  background: var(--ec-color-primary-dark);
 }
-.drag-container .area .drop p {
+
+.element-draggable {
   display: flex;
   align-items: center;
   flex-direction: row;
-  border: 2px solid transparent;
   padding: 8px;
   padding-top: 24px;
   margin: 8px;
   position: relative;
-  background: var(--ec-color-primary-regular);
+  background: var(--ec-color-primary);
+  color: var(--ec-color-neutral-100);
   border-radius: 8px;
   cursor: grab;
+  border: 2px dashed transparent;
   transition: all 0.3s ease-in-out;
 }
-.drag-container .area .drop p em.burguer {
-  height: 20px;
-  width: 20px;
-  background-size: contain;
-  background-image: url(../images/hamburger-solid.svg);
-  background-repeat: no-repeat;
-  filter: invert(100%) sepia(0%) saturate(3%) hue-rotate(125deg) brightness(101%) contrast(101%);
-  margin-right: 10px;
-}
-.drag-container .area .drop p:active {
-  border: 2px dashed var(--ec-color-primary);
+.element-draggable:active {
+  border: 2px dashed var(--ec-color-neutral-100);
   cursor: grabbing;
 }
-.drag-container .area .drop p.grabbing {
+.element-draggable.grabbing {
   opacity: 0.5;
 }
-.drag-container .area .drop p.preview {
-  background: var(--ec-color-primary-regular);
-  border: 2px dashed var(--ec-color-primary);
+.element-draggable.preview {
+  background: var(--ec-color-primary);
+  border: 2px dashed var(--ec-color-primary-medium);
 }
-.drag-container .area .drop p:before {
+.element-draggable:before {
   content: "";
   width: 16px;
   height: 4px;
@@ -264,7 +258,16 @@ table {
   left: 8px;
   top: 8px;
   border-radius: 12px;
-  background-color: var(--ec-color-primary);
+  background-color: var(--ec-color-primary-medium);
+}
+.element-draggable em.burguer {
+  height: 20px;
+  width: 20px;
+  background-size: contain;
+  background-image: url(../images/hamburger-solid.svg);
+  background-repeat: no-repeat;
+  filter: invert(100%) sepia(0%) saturate(3%) hue-rotate(125deg) brightness(101%) contrast(101%);
+  margin-right: 10px;
 }
 
 body {
